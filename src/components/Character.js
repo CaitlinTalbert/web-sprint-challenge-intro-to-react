@@ -1,11 +1,19 @@
  //Write your Character component here
 import React from 'react'; 
+import styled from 'styled-components'; 
+
+const H1 = styled.h1`
+    font-family: sans-serif;
+    `
+
+
+
 
 const Character = (props) => {
     console.log(props)
 
     return (
-       <h1 key={"characterArticle-" + props.character.id}>{props.character.name}</h1>
+       <H1 key={"characterArticle-" + props.character.id}>{props.character.name}</H1>
     );
 };
 
