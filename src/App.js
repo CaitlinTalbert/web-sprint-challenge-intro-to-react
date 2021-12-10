@@ -33,6 +33,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>StarWars Characters:</h1>
     <article>
       {characterData.map((character) => (
         <Character key={"person" + character.id} character={character} />))}
