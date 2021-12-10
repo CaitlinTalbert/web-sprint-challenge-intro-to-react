@@ -13,19 +13,20 @@ import './App.css';
 
 
 const App = () => {
-
-  const [baseURL, setBaseURL] = useState("https://swapi.dev/api/people")
   const [characterData, setCharacterData] = useState([])
 
   useEffect(() => {
-    axios.get(baseURL)
-    .then((response) => {
-      console.log(response.data)
-      setCharacterData(response.data)
+    axios.get("https://swapi.dev/api/people/")
+    .then((res) => {
+      console.log(res.data)
+      setCharacterData(res.data);
     })
-  }, [])
+    //.catch((err) => {
+    //  console.error(err); 
+    //})
+  }, []);
 
-  console.log(characterData)
+  //console.log(characterData)
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -35,15 +36,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
-      <h2>{characterData.name}</h2>
-      {
-        characterData.map((character, index) => (
-          <Character key={index} character={characterData} />
-        ))
-      }
-    </div>
-  );
-}
+    <article>
+      {characterData.map((character) => (
+        <Character key={"person" + character.id} character={character} />))}
+  </article>
+  </div>
+  )
+}; 
+
 
 export default App;

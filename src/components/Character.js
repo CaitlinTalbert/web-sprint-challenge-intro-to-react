@@ -1,28 +1,26 @@
  //Write your Character component here
-export default function Character(props) {
+
+/*
+ export default function Character(props) {
     console.log(props)
 
     return (
-        <article classNAme="character">
-            <h2>{props.Character.name}</h2>
-            <img src={props.character.name} alt={props.person.image} />
+        <article className="character">
+            <h2>{props.character.name}</h2>
+            <img src={props.character.name} alt={props.character.image} />
         </article>
-    )
-}
+    );
+};
+*/
 
-
-
-
-
-
-
-/* import React, { useState } from 'react'; 
+import React from 'react'; 
 
 const Character = (props) => {
-   const { } = props; 
-    return (
+    console.log(props)
 
+    return (
+       <h1 key={"characterArticle-" + props.character.id}>{props.character.name}</h1>
     );
 };
 
-export default Character; */
+export default Character; 
