@@ -79,6 +79,17 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+React allows us to develop larger applications like Twitter and Facebook that have data that is not static and changes frequently. React can detect that an apps state has changed, and will update the virtual DOM. React will know which nodes have changed by the state changes and can update only those specific changes on the actual DOM, which helps take the load off of our browsers. So, React helps to provide a better experience for users and web developers. 
+
+2. Describe component state.
+
+React components have a build-in state object, its where you can store property values that belong to a component. The state of an object can change, so the component will re-render. You can keep track of a state variable from within a component, initialize it with a value and change that value using useState. 
+
+3. Describe props.
+
+Props are arguments passed into React components. Props stands for properties and are passed to components by HTML attributes. So using props you can pass information held on state inside one component to another. You should never make changes to props data because they are read-only, this helps data flow remain clean and organized. This can help know exactly where changes are made in an application and if there are any errors you can know where to fix the errors. 
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+A side effect is anything that affects something outside the scope of the function being executed. This can mean fetching data from an API, timers, logging, and manually manipulating the DOM. You can sync side effects with state or prop changes by passing in a dependency array as the second argument to the effect hook. 
