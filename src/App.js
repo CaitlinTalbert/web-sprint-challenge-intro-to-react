@@ -1,11 +1,9 @@
 //dependencies 
 import React, { useState, useEffect }from 'react';
 import axios from 'axios'; 
-//import { API_URL, API_KEY } from ""; 
 
 //Components 
 import Character from "./components/Character.js"; 
-
 
 //Stylesheets 
 import './App.css';
@@ -21,12 +19,11 @@ const App = () => {
       console.log(res.data)
       setCharacterData(res.data);
     })
-    //.catch((err) => {
-    //  console.error(err); 
-    //})
+    .catch((err) => {
+     console.error(err); 
+    })
   }, []);
 
-  //console.log(characterData)
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
